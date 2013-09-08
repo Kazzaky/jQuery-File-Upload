@@ -349,6 +349,8 @@ class UploadHandler
                 $new_width = $max_width;
                 $new_height = $img_height / ($img_width / $max_width);
             }
+            $new_width = round($new_width);
+            $new_height = round($new_height);
             $dst_x = 0 - ($new_width - $max_width) / 2;
             $dst_y = 0 - ($new_height - $max_height) / 2;
             $new_img = imagecreatetruecolor($max_width, $max_height);
